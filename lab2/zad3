@@ -1,0 +1,36 @@
+namespace Zadanie3
+{
+    class Date
+    {
+        private DateTime DateNow;
+
+        public Date()
+        {
+            DateNow = DateTime.Now.Date;
+        }
+
+        public DateTime CurrentDate() { return DateNow; }
+
+        public void AddWeek()
+        {
+            DateNow = DateNow.AddDays(7);
+        }
+
+        
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Date date = new();
+
+
+            
+            date.AddWeek();
+            Console.WriteLine($"Data po przesunieciu o tygodnie do przodu: {date.CurrentDate().ToShortDateString()}.");
+            var date1 = new DateTime(2008, 5, 1, 8, 30, 52);
+            Console.WriteLine(date1);
+
+        }
+    }
+}
